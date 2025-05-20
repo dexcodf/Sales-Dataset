@@ -1,0 +1,30 @@
+# Sales Dataset - SQL Import Script
+
+This repository contains an SQL script to set up and populate a simple sales dataset for analysis.
+
+## 📂 Contents
+
+- `Sales datset.sql`: SQL script to create and load a `sales_data` table.
+
+## 🛠️ Prerequisites
+
+- MySQL Server installed (tested with MySQL 8.0)
+- Access to the `Uploads` directory for file import
+- A CSV file named `sales_dataset.csv` located at:
+
+## 🧾 Table Structure
+
+The script creates a table named `sales_data` with the following fields:
+
+| Column       | Type          | Description          |
+|--------------|---------------|----------------------|
+| `id`         | INT           | Unique ID            |
+| `product_name` | VARCHAR(100) | Name of the product  |
+| `sales_date` | DATE          | Date of the sale     |
+| `amount`     | DECIMAL(10,2) | Sales amount         |
+
+## 📥 Import Instructions
+
+1. Enable local infile option:
+ ```sql
+ SET GLOBAL local_infile = 1;
